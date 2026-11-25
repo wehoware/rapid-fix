@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 export const dynamic = 'force-dynamic';
 
-const API_BASE_URL = process.env.API_BASE_URL || 'https://wehoware-saas.vercel.app';
+const API_BASE_URL = process.env.API_BASE_URL || 'https://www.app.wehoware.ca';
 const API_CLIENT_ID = process.env.API_CLIENT_ID || 'fce75c6e-733c-4f25-a0dd-bf067cdb6bcb';
 
 export async function GET(req, { params }) {
