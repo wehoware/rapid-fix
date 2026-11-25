@@ -61,7 +61,7 @@ const Hero3D = ({ scrollYProgress, skipModel }) => {
   const statsOpacity = useTransform(scrollYProgress, [0, 0.08, 0.12], [1, 1, 0]);
 
   const stats = [
-    { icon: "fas fa-wrench", value: "15+", label: "Years Experience" },
+    { icon: "fas fa-wrench", value: "8+", label: "Certified Technicians" },
     { icon: "fas fa-truck", value: "2k+", label: "Fleet Serviced" },
     { icon: "fas fa-clock", value: "24/7", label: "Emergency Support" },
   ];
@@ -297,7 +297,7 @@ const Hero3D = ({ scrollYProgress, skipModel }) => {
                   fontWeight: 600,
                 }}
               >
-                Requesting A Call:
+                Call us now:
               </div>
               <a
                 href="tel:4378364848"

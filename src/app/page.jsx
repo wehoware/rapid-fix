@@ -19,7 +19,7 @@ import TruckServices from "@/components/TruckServices";
 export const metadata = {
   title: "RapidFix | Auto & Diesel Repair in Scarborough, ON",
   description:
-    "RapidFix offers expert auto and diesel repair in Scarborough, ON. From brakes and diagnostics to fleet maintenance and SSC inspections — fast, honest, and affordable service at 112 Sinnott Rd.",
+    "RapidFix offers expert auto and diesel repair in Scarborough, ON. Brakes, diagnostics, fleet maintenance, and SSC inspections. Fast, honest service at 112 Sinnott Rd.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "RapidFix | Auto & Diesel Repair in Scarborough, ON",

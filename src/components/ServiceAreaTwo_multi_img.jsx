@@ -21,8 +21,10 @@ const truncateText = (text, maxLength) => {
   return text.substring(0, maxLength).trim() + "...";
 };
 
-const ServiceAreaTwo_multi_img = () => {
-  const { services, loading } = useServices();
+const ServiceAreaTwo_multi_img = ({ initialServices }) => {
+  const { services: ctxServices, loading: ctxLoading } = useServices();
+  const services = initialServices?.length ? initialServices : ctxServices;
+  const loading = !initialServices?.length && ctxLoading;
 
   if (loading) {
     return (

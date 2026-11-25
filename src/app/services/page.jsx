@@ -39,7 +39,7 @@ const page = async () => {
       <JsonLd data={breadcrumbSchema([{ name: "Services", url: "/services/" }])} />
 
       {/* Service Area Two */}
-      <ServiceAreaTwo_multi_img />
+      <ServiceAreaTwo_multi_img initialServices={listData?.data || []} />
 
       {/* Subscribe */}
       <Subscribe />

@@ -13,7 +13,7 @@ const FooterArea = () => {
               <div className="widget footer-widget widget-about">
                 <h3 className="widget_title">About Us</h3>
                 <p className="footer-text mb-30">
-                  Expert auto and diesel repair you can trust. Fast turnaround, honest pricing, and quality workmanship — every time.
+                  Straightforward auto and diesel repair in Scarborough. Fair prices, quality work, and most repairs backed by a 12-month / 20,000 km warranty.
                 </p>
                 <div className="social-btn style3">
                   <Link href="https://www.instagram.com/p/DaEkC23v6Tq/?igsh=bXc2enk0bnVxcWJm" target="_blank" rel="noopener noreferrer" tabIndex={-1}>

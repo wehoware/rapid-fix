@@ -22,14 +22,14 @@ const About = () => {
                     {({ isVisible }) =>
                       isVisible && (
                         <span className="counter-number">
-                          <CountUp delay={0} start={0} end={5} />
-                          k+
+                          <CountUp delay={0} start={0} end={500} />
+                          +
                         </span>
                       )
                     }
                   </TrackVisibility>
                 </h3>
-                <h4 className="about-counter-text">Trusted Customer</h4>
+                <h4 className="about-counter-text">Happy Customers</h4>
               </div>
               <div className="about-year-wrap2 movingX">
                 <div className="about-year-grid-wrap">
@@ -41,30 +41,30 @@ const About = () => {
                       {({ isVisible }) =>
                         isVisible && (
                           <span className="counter-number">
-                            <CountUp delay={0} start={0} end={15} />+
+                            <CountUp delay={0} start={0} end={8} />+
                           </span>
                         )
                       }
                     </TrackVisibility>
                   </h3>
                 </div>
-                <h4 className="about-year-text">Years Of Experiences</h4>
+                <h4 className="about-year-text">Certified Technicians</h4>
               </div>
             </div>
           </div>
           <div className="col-xxl-5 col-xl-6" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
             <div className="about-content-wrap">
               <div className="title-area mb-30">
-                <span className="sub-title" data-aos="fade-up" data-aos-delay="200">Know About Us</span>
+                <span className="sub-title" data-aos="fade-up" data-aos-delay="200">About Us</span>
                 <h2 className="sec-title" data-aos="fade-up" data-aos-delay="250">
-                  More Than Mechanics — Your Trusted Vehicle Partners{" "}
+                  Your Local Auto & Diesel Repair Shop{" "}
                   <Image className="title-bg-shape shape-center" src="/assets/img/bg/title-bg-shape.png" width={485} height={93} alt="RapidFix" />
                 </h2>
                 <p className="sec-text" data-aos="fade-up" data-aos-delay="300">
-                  At RapidFix, we're more than just mechanics — we're your
-                  partners in keeping your vehicles running at peak performance.
-                  Our team of certified technicians brings years of expertise in
-                  both auto and diesel repair.
+                  RapidFix is a Scarborough auto and diesel repair shop run by
+                  certified technicians. We service cars, trucks, and commercial
+                  fleets with straightforward advice and repairs done right the
+                  first time.
                 </p>
               </div>
               <div className="about-feature-wrap style-shadow" data-aos="fade-up" data-aos-delay="350">

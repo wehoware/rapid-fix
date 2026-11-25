@@ -13,8 +13,8 @@ const CTAArea = () => {
                   Subscribe To Stay Connected
                 </h2>
                 <p className="sec-text text-white">
-                  Damages with a vehicle. It involves diagnosing the problem,
-                  repairing necessary parts.
+                  Get service reminders, seasonal maintenance tips, and shop
+                  updates in your inbox.
                 </p>
               </div>
               <form className="newsletter-form style2">

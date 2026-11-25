@@ -306,7 +306,7 @@ const ServiceRequestForm = () => {
         </div>
         <h3 className="mt-3">Request received!</h3>
         <p className="mb-1">
-          Thanks {formData.name.split(" ")[0]} — we&apos;ve got your details and will confirm shortly.
+          Thanks {formData.name.split(" ")[0]}, we&apos;ve got your details and will confirm shortly.
         </p>
         <p className="text-muted">
           Need it sooner? Call us at <a href="tel:4378364848">(437) 836-4848</a>.
@@ -352,7 +352,7 @@ const ServiceRequestForm = () => {
 
       {step === 1 && (
         <>
-          <p className="mb-4">Takes 30 seconds — we&apos;ll follow up to confirm.</p>
+          <p className="mb-4">Takes 30 seconds. We&apos;ll follow up to confirm.</p>
           <div className="row">
             <div className="col-12">
               <div className="form-group">
@@ -437,7 +437,7 @@ const ServiceRequestForm = () => {
                   }}
                 />
                 <label className="form-check-label" htmlFor="srq-skip-vehicle">
-                  I&apos;m not sure — we&apos;ll discuss it
+                  I&apos;m not sure, we&apos;ll discuss it
                 </label>
               </div>
             </div>
@@ -498,7 +498,7 @@ const ServiceRequestForm = () => {
 
               {!searching && vehicleSearch.trim().length >= 3 && searchResults.length === 0 && (
                 <div className="text-muted small mt-1">
-                  No matches — try a VIN, or{" "}
+                  No matches. Try a VIN, or{" "}
                   <a href="#manual" onClick={(e) => { e.preventDefault(); setManualEntry(true); }}>enter it manually</a>.
                 </div>
               )}

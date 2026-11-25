@@ -119,10 +119,9 @@ async function createShopmonkeyOrder({ headers, customerId, vehicleId, service, 
     body: JSON.stringify({
       customerId,
       ...(vehicleId ? { vehicleId } : {}),
-      name: service && service !== 'Choose' ? `${service} — Website Request` : 'Website Service Request',
+      name: service && service !== 'Choose' ? `${service} (Website request)` : 'Website Service Request',
       complaint: summary,
       locationId: SHOPMONKEY_LOCATION_ID,
-      attributionSource: 'Website',
     }),
   });
   const data = await res.json();

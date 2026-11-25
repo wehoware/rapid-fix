@@ -30,10 +30,10 @@ export function FloatingWrench({ scrollYProgress }) {
 }
 
 const counters = [
-  { end: 2, suffix: "k+", label: "Winning Award" },
-  { end: 8, suffix: "k+", label: "Happy Clients" },
-  { end: 200, suffix: "k+", label: "Team Members" },
-  { end: 9, suffix: "k+", label: "Projects Done" },
+  { end: 6, suffix: "+", label: "Service Categories" },
+  { end: 8, suffix: "k+", label: "Happy Customers" },
+  { end: 8, suffix: "+", label: "Certified Technicians" },
+  { end: 9, suffix: "k+", label: "Repairs Completed" },
 ];
 
 const Counter3D = ({ scrollYProgress, skipModel }) => {

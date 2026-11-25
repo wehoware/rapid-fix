@@ -28,12 +28,12 @@ const Counter = () => {
                         <h2 className="counter-card_number">
                           {countersVisible && (
                             <span className="counter-number">
-                              <CountUp delay={0} start={0} end={2} />
-                              k+
+                              <CountUp delay={0} start={0} end={6} />
+                              +
                             </span>
                           )}
                         </h2>
-                        <p className="counter-card_text">Winning Award</p>
+                        <p className="counter-card_text">Service Categories</p>
                       </div>
                       <div className="counter-card_icon">
                         <Image src="/assets/img/icon/counter-icon_1-1.svg" width={40} height={40} alt="Fixturbo" />
@@ -46,12 +46,12 @@ const Counter = () => {
                         <h2 className="counter-card_number">
                           {countersVisible && (
                             <span className="counter-number">
-                              <CountUp delay={0} start={0} end={8} />
-                              k+
+                              <CountUp delay={0} start={0} end={500} />
+                              +
                             </span>
                           )}
                         </h2>
-                        <p className="counter-card_text">Happy Clients</p>
+                        <p className="counter-card_text">Happy Customers</p>
                       </div>
                       <div className="counter-card_icon">
                         <Image src="/assets/img/icon/counter-icon_1-2.svg" width={40} height={40} alt="Fixturbo" />
@@ -64,12 +64,12 @@ const Counter = () => {
                         <h2 className="counter-card_number">
                           {countersVisible && (
                             <span className="counter-number">
-                              <CountUp delay={0} start={0} end={200} />
-                              k+
+                              <CountUp delay={0} start={0} end={8} />
+                              +
                             </span>
                           )}
                         </h2>
-                        <p className="counter-card_text">Team Members</p>
+                        <p className="counter-card_text">Certified Technicians</p>
                       </div>
                       <div className="counter-card_icon">
                         <Image src="/assets/img/icon/counter-icon_1-3.svg" width={40} height={40} alt="Fixturbo" />
@@ -82,12 +82,12 @@ const Counter = () => {
                         <h2 className="counter-card_number">
                           {countersVisible && (
                             <span className="counter-number">
-                              <CountUp delay={0} start={0} end={9} />
-                              k+
+                              <CountUp delay={0} start={0} end={12} />
+                              -Month
                             </span>
                           )}
                         </h2>
-                        <p className="counter-card_text">Projects Done</p>
+                        <p className="counter-card_text">Repair Warranty</p>
                       </div>
                       <div className="counter-card_icon">
                         <Image src="/assets/img/icon/counter-icon_1-4.svg" width={40} height={40} alt="Fixturbo" />
@@ -109,15 +109,15 @@ const Counter = () => {
                   <ul>
                     <li>
                       <i className="fas fa-check" />
-                      We're Your Repair Superstore
+                      Certified Auto & Diesel Technicians
                     </li>
                     <li>
                       <i className="fas fa-check" />
-                      Fueled by Expertise
+                      Upfront Pricing, No Surprises
                     </li>
                     <li>
                       <i className="fas fa-check" />
-                      Car Repair the best Services
+                      12-Month / 20,000 km Warranty
                     </li>
                   </ul>
                 </div>
@@ -126,7 +126,7 @@ const Counter = () => {
                     <Image src="/assets/img/icon/phone-1.svg" width={25} height={25} alt="Fixturbo" />
                   </div>
                   <div className="media-body">
-                    <h6 className="title text-white">Requesting A Call:</h6>
+                    <h6 className="title text-white">Call us now:</h6>
                     <h4 className="link">
                       <a className="text-white" href="tel:4378364848">
                         (437) 836-4848

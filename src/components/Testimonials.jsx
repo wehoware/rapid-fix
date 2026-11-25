@@ -18,9 +18,9 @@ const Testimonials = () => {
           <div className="col-lg-6" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
             <div style={{ padding: "30px 0 80px" }}>
               <div className="title-area" data-aos="fade-up" data-aos-delay="200">
-                <span className="sub-title">Clients testimonial</span>
+                <span className="sub-title">What our customers say</span>
                 <h2>
-                  Car Repair The Best <br /> Services
+                  Trusted By Scarborough <br /> Drivers
                 </h2>
               </div>
               <div className="row global-carousel testi-slider-1">

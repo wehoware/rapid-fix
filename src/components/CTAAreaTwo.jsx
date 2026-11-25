@@ -17,7 +17,7 @@ const CTAAreaTwo = () => {
               <div className="title-area mb-md-0" data-aos="fade-right" data-aos-duration="800" style={{ position: "relative" }}>
                 <span className="sub-title style2 text-white" style={{ position: "relative", zIndex: "1" }}>Contact us</span>
                 <h2 className="sec-title text-white mb-0" style={{ position: "relative", zIndex: "1" }}>
-                  Where Engines Roar and Problems Soar
+                  Car Trouble? Get It Checked Today.
                 </h2>
               </div>
             </div>

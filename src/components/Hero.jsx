@@ -72,7 +72,7 @@ const HeroThree = () => {
                         data-ani="slideinup"
                         data-ani-delay="0.2s"
                       >
-                        Comprehensive fleet maintenance and diesel repair solutions tailored for businesses. Minimize downtime and maximize performance.
+                        Fleet maintenance and diesel repair for Scarborough businesses. Fast turnaround that keeps your vehicles working.
                       </p>
                       <div
                         className="btn-group"
@@ -88,7 +88,7 @@ const HeroThree = () => {
                           </div>
                           <div className="media-body">
                             <h6 className="title text-white">
-                              Requesting A Call:
+                              Call us now:
                             </h6>
                             <h4 className="link">
                               <a className="text-white" href="tel:4378364848">
@@ -158,7 +158,7 @@ const HeroThree = () => {
                         data-ani="slideinup"
                         data-ani-delay="0.2s"
                       >
-                        From engine tune-ups and transmission service to tire rotations and brake inspections — we handle every aspect of your car's health.
+                        Engine work, transmission service, tires, brakes, and everything in between. Book a visit and we'll get it sorted.
                       </p>
                       <div
                         className="btn-group"
@@ -174,7 +174,7 @@ const HeroThree = () => {
                           </div>
                           <div className="media-body">
                             <h6 className="title text-white">
-                              Requesting A Call:
+                              Call us now:
                             </h6>
                             <h4 className="link">
                               <a className="text-white" href="tel:4378364848">

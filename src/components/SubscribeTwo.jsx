@@ -21,7 +21,7 @@ const SubscribeTwo = () => {
             <Image src="/assets/img/icon/phone-1.svg" width={25} height={25} alt="RapidFix" />
           </div>
           <div className="media-body">
-            <h6 className="title text-white">Requesting A Call:</h6>
+            <h6 className="title text-white">Call us now:</h6>
             <h4 className="link">
               <a className="text-white" href="tel:4378364848">
                 (437) 836-4848

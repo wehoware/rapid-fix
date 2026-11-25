@@ -14,7 +14,7 @@ const ProcessArea = () => {
             <div className="title-area text-center" data-aos="fade-up">
               <span className="sub-title">Work Process</span>
               <h2 className="sec-title">
-                It Dependable Car Repair Best Solutions
+                How It Works
               </h2>
             </div>
           </div>
@@ -25,11 +25,10 @@ const ProcessArea = () => {
               <div className="process-card-icon">
                 <Image src="/assets/img/icon/process-icon-1-1.svg" width={40} height={40} alt="RapidFix" />
               </div>
-              <h4 className="process-card-title">Mobile Car Repair</h4>
+              <h4 className="process-card-title">Book Your Visit</h4>
               <p className="process-card-text">
-                It is long established fact that a reader will be distrol acted
-                bioiiy. It is long established fact that a reader will be
-                distrol acted bioiiy
+                Call us or request a quote online. Tell us what your vehicle
+                needs and pick a time that works for you.
               </p>
             </div>
           </div>
@@ -38,11 +37,10 @@ const ProcessArea = () => {
               <div className="process-card-icon">
                 <Image src="/assets/img/icon/process-icon-1-2.svg" width={40} height={40} alt="RapidFix" />
               </div>
-              <h4 className="process-card-title">Pro Auto Fix</h4>
+              <h4 className="process-card-title">Diagnosis & Estimate</h4>
               <p className="process-card-text">
-                It is long established fact that a reader will be distrol acted
-                bioiiy. It is long established fact that a reader will be
-                distrol acted bioiiy
+                Our certified technicians inspect the vehicle and give you a
+                clear, upfront estimate before any work begins.
               </p>
             </div>
           </div>
@@ -51,11 +49,10 @@ const ProcessArea = () => {
               <div className="process-card-icon">
                 <Image src="/assets/img/icon/process-icon-1-3.svg" width={40} height={40} alt="RapidFix" />
               </div>
-              <h4 className="process-card-title">Precision Auto Works</h4>
+              <h4 className="process-card-title">Repair & Quality Check</h4>
               <p className="process-card-text">
-                It is long established fact that a reader will be distrol acted
-                bioiiy. It is long established fact that a reader will be
-                distrol acted bioiiy
+                We fix it right, road-test it, and back the work with our
+                12-month / 20,000 km warranty.
               </p>
             </div>
           </div>

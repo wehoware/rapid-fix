@@ -15,8 +15,8 @@ export const metadata = {
   description:
     "Learn about RapidFix � certified auto and diesel repair technicians with 15+ years of experience and 5,000+ vehicles serviced. We deliver fast, accurate, and affordable service for personal vehicles and commercial fleets.",
   alternates: { canonical: "/about/" },
-  openGraph: { title: "About Us | RapidFix - Auto & Diesel Repair Specialists", description: "Learn about RapidFix — certified auto and diesel repair technicians with 15+ years of experience and 5,000+ vehicles serviced.", url: "/about/" },
-  twitter: { card: "summary_large_image", title: "About Us | RapidFix - Auto & Diesel Repair Specialists", description: "Learn about RapidFix — certified auto and diesel repair technicians with 15+ years of experience and 5,000+ vehicles serviced." },
+  openGraph: { title: "About Us | RapidFix - Auto & Diesel Repair Specialists", description: "Learn about RapidFix. Certified auto and diesel repair technicians serving Scarborough drivers.", url: "/about/" },
+  twitter: { card: "summary_large_image", title: "About Us | RapidFix - Auto & Diesel Repair Specialists", description: "Learn about RapidFix. Certified auto and diesel repair technicians serving Scarborough drivers." },
 };
 
 

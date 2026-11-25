@@ -204,9 +204,9 @@ const ContactArea = () => {
                   <Image src="/assets/img/icon/faq2-counter-icon-1.svg" width={60} height={60} alt="RapidFix" />
                   <div className="media-right">
                     <h3 className="about-counter">
-                      <span className="counter-number">250</span>+
+                      <span className="counter-number">500</span>+
                     </h3>
-                    <h4 className="about-counter-text">Services we provide</h4>
+                    <h4 className="about-counter-text">Happy customers</h4>
                   </div>
                 </div>
                 <Image src="/assets/img/contact/contact-1.jpeg" width={1024} height={1024} alt="RapidFix" />

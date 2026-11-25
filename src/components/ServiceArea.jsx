@@ -37,7 +37,7 @@ const ServiceArea = () => {
           <div className="col-lg-6">
             <div className="title-area text-center" data-aos="fade-up">
               <h2 className="sec-title">
-                Expert Auto & Diesel Repair – Built for Reliability
+                Auto & Diesel Repair Services
                 <Image className="title-bg-shape shape-center" src="/assets/img/bg/title-bg-shape.png" width={485} height={93} alt="RapidFix" />
               </h2>
             </div>

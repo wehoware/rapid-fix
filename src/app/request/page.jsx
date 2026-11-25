@@ -39,7 +39,7 @@ const page = () => {
                 <h2 className="sec-title">Request a Quote</h2>
                 <p>
                   Tell us what you need in two quick steps. Prefer to talk? Call{" "}
-                  <a href="tel:4378364848">(437) 836-4848</a> — we&apos;re open Mon–Fri, 8 AM–6 PM.
+                  <a href="tel:4378364848">(437) 836-4848</a>. We&apos;re open Mon–Fri, 8 AM–6 PM.
                 </p>
               </div>
               <div className="contact-form-wrap" data-aos="fade-up" data-aos-delay="100">

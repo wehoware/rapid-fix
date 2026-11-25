@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const counters = [
   { end: 5, suffix: "k+", label: "Trusted Customers", icon: "fa-users" },
-  { end: 15, suffix: "+", label: "Years of Experience", icon: "fa-history" },
+  { end: 8, suffix: "+", label: "Certified Technicians", icon: "fa-tools" },
   { end: 8, suffix: "k+", label: "Happy Clients", icon: "fa-smile" },
   { end: 9, suffix: "k+", label: "Projects Done", icon: "fa-wrench" },
 ];
@@ -440,7 +440,7 @@ export default function AboutParallax() {
                   lineHeight: 1,
                 }}
               >
-                15+
+                12-Mo
               </div>
               <div
                 style={{
@@ -451,7 +451,7 @@ export default function AboutParallax() {
                   marginTop: "2px",
                 }}
               >
-                Years Experience
+                Repair Warranty
               </div>
             </div>
           </div>
