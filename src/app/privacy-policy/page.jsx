@@ -9,6 +9,9 @@ export const metadata = {
   title: "Privacy Policy | RapidFix",
   description:
     "Read the RapidFix Privacy Policy to learn how we collect, use, and protect your personal information when you use our website and auto repair services.",
+  alternates: { canonical: "/privacy-policy/" },
+  openGraph: { title: "Privacy Policy | RapidFix", description: "How RapidFix collects, uses, and protects your personal information.", url: "/privacy-policy/" },
+  twitter: { card: "summary_large_image", title: "Privacy Policy | RapidFix", description: "How RapidFix collects, uses, and protects your personal information." },
 };
 
 // ─────────────────────────────────────────────────────────────────────────────

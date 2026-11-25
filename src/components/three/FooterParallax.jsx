@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const footerLinks = {
   Services: [
@@ -78,15 +79,11 @@ export default function FooterParallax() {
       >
         {/* Brand column */}
         <div className="footer-brand">
-          <img
-            src="/assets/logo1.png"
-            alt="RapidFix"
-            style={{
+          <Image src="/assets/logo1.png" width={1429} height={287} alt="RapidFix" style={{
               height: "40px",
               width: "auto",
               marginBottom: "16px",
-            }}
-          />
+            }} />
           <p
             style={{
               fontSize: "14px",

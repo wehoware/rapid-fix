@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./Navbar3D.module.scss";
+import Image from "next/image";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
@@ -50,7 +51,7 @@ export default function Navbar3D() {
       <div className={`${styles.wrapper} ${scrolled ? styles.scrolled : ""}`}>
         <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
           <Link href="/" className={styles.logo}>
-            <img src="/assets/logo1.png" alt="RapidFix" />
+            <Image src="/assets/logo1.png" width={1429} height={287} alt="RapidFix" />
           </Link>
 
           <div className={styles.links}>
@@ -82,14 +83,12 @@ export default function Navbar3D() {
               <i className="fas fa-phone" /> Call Now
             </a>
 
-            <a
-              href="https://app.shopmonkey.cloud/public/quote-request/f3173cde-af0b-453f-93bd-1dbf406b64d0"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/request"
               className={styles.quoteBtn}
             >
               Request a Quote
-            </a>
+            </Link>
 
             <button
               className={styles.mobileToggle}
@@ -122,14 +121,12 @@ export default function Navbar3D() {
             >
               <i className="fas fa-phone" /> Call Now
             </a>
-            <a
-              href="https://app.shopmonkey.cloud/public/quote-request/f3173cde-af0b-453f-93bd-1dbf406b64d0"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/request"
               className={styles.mobileQuoteBtn}
             >
               Request a Quote
-            </a>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

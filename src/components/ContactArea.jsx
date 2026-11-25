@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { captureAttribution, getAttribution, pushLeadEvent } from "@/lib/attribution";
 import "./ContactArea.css";
+import Image from "next/image";
 
 const ContactArea = () => {
   const [formData, setFormData] = useState({
@@ -200,10 +201,7 @@ const ContactArea = () => {
             <div className="col-lg-6 text-lg-end" data-aos="fade-left" data-aos-duration="900">
               <div className="faq-thumb2 mb-xl-0 mb-50">
                 <div className="about-counter-grid jump">
-                  <img
-                    src="/assets/img/icon/faq2-counter-icon-1.svg"
-                    alt="RapidFix"
-                  />
+                  <Image src="/assets/img/icon/faq2-counter-icon-1.svg" width={60} height={60} alt="RapidFix" />
                   <div className="media-right">
                     <h3 className="about-counter">
                       <span className="counter-number">250</span>+
@@ -211,7 +209,7 @@ const ContactArea = () => {
                     <h4 className="about-counter-text">Services we provide</h4>
                   </div>
                 </div>
-                <img src="/assets/img/contact/contact-1.jpeg" alt="RapidFix" />
+                <Image src="/assets/img/contact/contact-1.jpeg" width={1024} height={1024} alt="RapidFix" />
               </div>
             </div>
             <div className="col-lg-6" data-aos="fade-right" data-aos-duration="900">

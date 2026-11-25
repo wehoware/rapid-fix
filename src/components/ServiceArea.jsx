@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useServices } from "@/context/ServicesContext";
+import Image from "next/image";
 
 const bgImages = [
   "/assets/img/services/service-8.jpg",
@@ -37,11 +38,7 @@ const ServiceArea = () => {
             <div className="title-area text-center" data-aos="fade-up">
               <h2 className="sec-title">
                 Expert Auto & Diesel Repair – Built for Reliability
-                <img
-                  className="title-bg-shape shape-center"
-                  src="assets/img/bg/title-bg-shape.png"
-                  alt="RapidFix"
-                />
+                <Image className="title-bg-shape shape-center" src="/assets/img/bg/title-bg-shape.png" width={485} height={93} alt="RapidFix" />
               </h2>
             </div>
           </div>
@@ -82,7 +79,7 @@ const ServiceArea = () => {
                   >
                     <div>
                       <div className="service-card_icon">
-                        <img
+                        <img loading="lazy"
                           src={iconList[index % iconList.length]}
                           alt={service.title}
                         />

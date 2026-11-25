@@ -61,7 +61,7 @@ const ServiceAreaTwo_multi_img = () => {
               <div className="service-card style-shadow h-100">
                 <div className="service-card_content">
                   <div className="service-card_icon">
-                    <img
+                    <img loading="lazy"
                       src={iconList[index % iconList.length]}
                       alt={service.title}
                     />
@@ -74,7 +74,7 @@ const ServiceAreaTwo_multi_img = () => {
                   </p>
                 </div>
                 <div className="service-card_img">
-                  <img
+                  <img loading="lazy"
                     src={
                       service.thumbnail || "/assets/img/services/service-1.jpg"
                     }

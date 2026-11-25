@@ -141,7 +141,7 @@ const BlogAreaList = () => {
               return (
                 <div className="blog-single-card" key={blog.id || index}>
                   <div className="blog-thumb">
-                    <img
+                    <img loading="lazy"
                       src={blog.thumbnail || "/assets/img/blog/blog-1.jpg"}
                       alt={blog.thumbnail_alt || blog.title}
                     />
@@ -235,7 +235,7 @@ const BlogAreaList = () => {
                         </div>
                         <div className="media-img">
                           <Link href={`/blog/${post.slug}`}>
-                            <img src={post.thumbnail || "/assets/img/blog/blog-1.jpg"} alt={post.title} />
+                            <img loading="lazy" src={post.thumbnail || "/assets/img/blog/blog-1.jpg"} alt={post.title} />
                           </Link>
                         </div>
                       </div>

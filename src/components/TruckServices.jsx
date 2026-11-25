@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 
 const TruckServices = () => {
   return (
@@ -8,11 +9,7 @@ const TruckServices = () => {
         <div className="row align-items-center flex-row-reverse">
           <div className="col-lg-6" data-aos="fade-left" data-aos-duration="900">
             <div className="truck-services-img mb-40 mb-lg-0">
-              <img
-                src="/assets/img/services/service%202.jpeg"
-                alt="RapidFix Truck Service"
-                className="w-100 rounded-4"
-              />
+              <Image src="/assets/img/services/service%202.jpeg" width={1376} height={768} alt="RapidFix Truck Service" className="w-100 rounded-4" />
             </div>
           </div>
           <div className="col-lg-6" data-aos="fade-right" data-aos-duration="900">

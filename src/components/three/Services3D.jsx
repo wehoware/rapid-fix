@@ -132,7 +132,7 @@ const Services3D = ({ scrollYProgress, skipModel }) => {
                     marginBottom: "20px",
                   }}
                 >
-                  <img
+                  <img loading="lazy"
                     src={iconList[index % iconList.length]}
                     alt={service.title}
                     style={{ width: "28px", height: "28px" }}

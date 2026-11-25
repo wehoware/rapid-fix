@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const About = () => {
   const sectionRef = useRef(null);
@@ -130,16 +131,8 @@ const About = () => {
 
       <div className="about-area-1 space" ref={sectionRef}>
         <div className="about1-shape-img shape-mockup">
-          <img
-            className="about1-shape-img-1 spin"
-            src="assets/img/normal/about_shape1-2.svg"
-            alt="Fixturbo"
-          />
-          <img
-            className="about1-shape-img-2 spin2"
-            src="assets/img/normal/about_shape1-1.svg"
-            alt="Fixturbo"
-          />
+          <Image className="about1-shape-img-1 spin" src="/assets/img/normal/about_shape1-2.svg" width={115} height={119} alt="Fixturbo" />
+          <Image className="about1-shape-img-2 spin2" src="/assets/img/normal/about_shape1-1.svg" width={91} height={96} alt="Fixturbo" />
         </div>
         <div className="container">
           <div className="row gx-60 align-items-center flex-row-reverse">
@@ -149,11 +142,7 @@ const About = () => {
                 ref={imageRef}
               >
                 <div className="about-img-1 about3-img-container">
-                  <img
-                    style={{ borderRadius: "10px" }}
-                    src="assets/img/hero/banner7.jpeg"
-                    alt="RapidFix"
-                  />
+                  <Image style={{ borderRadius: "10px" }} src="/assets/img/hero/banner7.jpeg" width={1024} height={1024} alt="RapidFix" />
                   <div className="about3-img-overlay" />
                 </div>
               </div>

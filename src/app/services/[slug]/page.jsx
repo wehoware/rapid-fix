@@ -4,11 +4,12 @@ import { SITE_URL } from "@/lib/site";
 import { fetchServiceBySlug } from "@/lib/servicesApi";
 
 export async function generateMetadata({ params }) {
-  const { slug } = params;
+  const { slug } = await params;
   const result = await fetchServiceBySlug(slug);
   const service = result?.service || result?.data || result;
-  const canonical =
-    service?.canonical_url || `${SITE_URL}/services/${slug}`;
+  // Self-referential canonical on the live URL — the upstream canonical_url
+  // field can carry a stale slug/domain and would misattribute indexing.
+  const canonical = `${SITE_URL}/services/${slug}/`;
 
   const fallbackTitle = slug
     ? slug
@@ -58,7 +59,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function ServiceDetailPage({ params }) {
-  const { slug } = params;
+  const { slug } = await params;
   const result = await fetchServiceBySlug(slug);
   const service = result?.service || result?.data || result;
 
@@ -72,7 +73,7 @@ export default async function ServiceDetailPage({ params }) {
           service?.faq_schema,
         ]}
       />
-      <ServiceDetailClient />
+      <ServiceDetailClient initialData={service} />
     </>
   );
 }

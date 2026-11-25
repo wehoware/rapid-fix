@@ -6,37 +6,38 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
-    "@ramonak/react-progress-bar": "^5.2.0",
-    "@react-three/drei": "^9.122.0",
-    "@react-three/fiber": "^8.18.0",
+    "@ramonak/react-progress-bar": "^5.4.0",
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.2",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
-    "bootstrap": "^5.3.3",
-    "framer-motion": "^12.42.2",
-    "gsap": "^3.15.0",
+    "bootstrap": "^5.3.9",
+    "framer-motion": "^14.14.0",
+    "gsap": "^3.15.1",
     "imagesloaded": "^5.0.0",
     "isotope-layout": "^3.0.6",
-    "next": "14.1.4",
-    "nodemailer": "^8.0.11",
-    "rc-slider": "^10.5.0",
-    "react": "^18",
+    "next": "^16.4.6",
+    "nodemailer": "^10.6.1",
+    "rc-slider": "^11.1.9",
+    "react": "^19.3.1",
     "react-countup": "^6.5.3",
-    "react-dom": "^18",
-    "react-fast-marquee": "^1.6.4",
+    "react-dom": "^19.3.1",
+    "react-fast-marquee": "^1.6.5",
     "react-modal-image": "^2.6.0",
     "react-on-screen": "^2.1.1",
     "react-progress-bar": "^0.1.0",
-    "react-range": "^1.8.14",
-    "react-scroll-to-top": "^3.0.0",
+    "react-range": "^1.10.0",
+    "react-scroll-to-top": "^3.1.0",
     "react-type-animation": "^3.2.0",
     "react-visibility-sensor": "^5.1.1",
-    "swiper": "^9.1.1",
-    "three": "^0.185.1"
+    "swiper": "^14.4.0",
+    "three": "^0.187.0"
   },
   "devDependencies": {
-    "sass": "^1.71.1"
+    "sass": "^1.108.2"
   }
 }

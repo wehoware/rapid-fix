@@ -1,11 +1,11 @@
 // Plugin CSS
-@import "~animate.css";
-@import "~bootstrap/dist/css/bootstrap.min.css";
-@import "swiper/scss";
-@import "swiper/scss/navigation";
-@import "swiper/scss/pagination";
-@import "swiper/scss/thumbs";
-@import "swiper/scss/free-mode";
+@import "animate.css";
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "swiper/css/thumbs";
+@import "swiper/css/free-mode";
 @import "swiper/css/effect-fade";
 @import 'rc-slider/assets/index.css';
 // @import "rc-slider/assets/index.css";
@@ -300,9 +300,9 @@ img { max-width: 100%; height: auto; }
 }
 
 // Init main SCSS File
-@import "~/public/assets/css/fontawesome.min.css";
-@import "/public/assets/css/demo.scss";
-@import "/public/assets/sass/style.scss";
+@import "../../public/assets/css/fontawesome.min.css";
+@import "../../public/assets/css/demo.scss";
+@import "../../public/assets/sass/style.scss";
 
 // ─── Service Card style2: center icon & title, text slides up on hover ───────
 .service-card.style2 {

@@ -5,12 +5,16 @@ import ServiceAreaTwo_multi_img from "@/components/ServiceAreaTwo_multi_img";
 import Subscribe from "@/components/Subscribe";
 import Preloader from "@/helper/Preloader";
 import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/schemas";
 import { fetchServicesList } from "@/lib/servicesApi";
 
 export const metadata = {
   title: "Services | RapidFix - Auto & Diesel Repair Specialists",
   description:
     "Explore RapidFix services: auto repair, diesel repair, diagnostics, maintenance, fleet services, and Safety Standards Certificate (SSC) inspections.",
+  alternates: { canonical: "/services/" },
+  openGraph: { title: "Services | RapidFix - Auto & Diesel Repair Specialists", description: "Auto repair, diesel repair, diagnostics, maintenance, fleet services, and SSC inspections.", url: "/services/" },
+  twitter: { card: "summary_large_image", title: "Services | RapidFix - Auto & Diesel Repair Specialists", description: "Auto repair, diesel repair, diagnostics, maintenance, fleet services, and SSC inspections." },
 };
 
 
@@ -32,6 +36,7 @@ const page = async () => {
 
       {/* Breadcrumb */}
       <Breadcrumb title={"Service"} img={"/assets/img/services/service-1.jpg"} />
+      <JsonLd data={breadcrumbSchema([{ name: "Services", url: "/services/" }])} />
 
       {/* Service Area Two */}
       <ServiceAreaTwo_multi_img />

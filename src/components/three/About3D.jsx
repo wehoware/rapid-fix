@@ -4,6 +4,7 @@ import { useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 import { useTransform, motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export function SuvModel({ scrollYProgress }) {
   const gltf = useGLTF("/assets/glb/lowpoly_generic_suv.glb");
@@ -67,11 +68,7 @@ const About3D = ({ scrollYProgress, skipModel }) => {
               border: "1px solid rgba(0,0,0,0.1)",
             }}
           >
-            <img
-              src="/assets/img/hero/banner7.jpeg"
-              alt="RapidFix"
-              style={{ width: "100%", display: "block" }}
-            />
+            <Image src="/assets/img/hero/banner7.jpeg" width={1024} height={1024} alt="RapidFix" style={{ width: "100%", display: "block" }} />
           </div>
         </motion.div>
 

@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, FreeMode, Thumbs, EffectFade, Autoplay } from "swiper";
+import { Navigation, FreeMode, Thumbs, EffectFade, Autoplay } from "swiper/modules";
+import Image from "next/image";
 
 const HeroThree = () => {
   return (
@@ -28,11 +29,7 @@ const HeroThree = () => {
                 maxHeight: "800px",
               }}
             >
-              <img
-                src="/assets/img/hero/banner8.jpeg"
-                alt="RapidFix"
-                loading="eager"
-                style={{
+              <Image src="/assets/img/hero/banner8.jpeg" width={1376} height={768} alt="RapidFix" priority style={{
                   position: "absolute",
                   inset: 0,
                   width: "100%",
@@ -40,8 +37,7 @@ const HeroThree = () => {
                   objectFit: "cover",
                   objectPosition: "center",
                   zIndex: 0,
-                }}
-              />
+                }} />
               <div
                 style={{
                   position: "absolute",
@@ -60,10 +56,7 @@ const HeroThree = () => {
                         data-ani-delay="0s"
                       >
                         <span>
-                          <img
-                            src="assets/img/hero/hero_shape_3.png"
-                            alt="RapidFix"
-                          />
+                          <Image src="/assets/img/hero/hero_shape_3.png" width={200} height={60} alt="RapidFix" />
                           Fleet & Diesel Specialists
                         </span>{" "}
                       </div>
@@ -91,10 +84,7 @@ const HeroThree = () => {
                         </Link>
                         <div className="call-media-wrap">
                           <div className="icon">
-                            <img
-                              src="assets/img/icon/phone-1.svg"
-                              alt="RapidFix"
-                            />
+                            <Image src="/assets/img/icon/phone-1.svg" width={25} height={25} alt="RapidFix" />
                           </div>
                           <div className="media-body">
                             <h6 className="title text-white">
@@ -125,11 +115,7 @@ const HeroThree = () => {
                 maxHeight: "800px",
               }}
             >
-              <img
-                src="/assets/img/hero/banner9.jpeg"
-                alt="RapidFix"
-                loading="eager"
-                style={{
+              <Image src="/assets/img/hero/banner9.jpeg" width={1376} height={768} alt="RapidFix" priority style={{
                   position: "absolute",
                   inset: 0,
                   width: "100%",
@@ -137,8 +123,7 @@ const HeroThree = () => {
                   objectFit: "cover",
                   objectPosition: "center",
                   zIndex: 0,
-                }}
-              />
+                }} />
               <div
                 style={{
                   position: "absolute",
@@ -157,20 +142,17 @@ const HeroThree = () => {
                         data-ani-delay="0s"
                       >
                         <span>
-                          <img
-                            src="assets/img/hero/hero_shape_3.png"
-                            alt="RapidFix"
-                          />
+                          <Image src="/assets/img/hero/hero_shape_3.png" width={200} height={60} alt="RapidFix" />
                           Complete Car Care Experts
                         </span>{" "}
                       </div>
-                      <h1
+                      <h2
                         className="hero-title text-white"
                         data-ani="slideinup"
                         data-ani-delay="0.1s"
                       >
                         Drive In. Drive Out Confident.
-                      </h1>
+                      </h2>
                       <p
                         className="hero-text text-white"
                         data-ani="slideinup"
@@ -188,10 +170,7 @@ const HeroThree = () => {
                         </Link>
                         <div className="call-media-wrap">
                           <div className="icon">
-                            <img
-                              src="assets/img/icon/phone-1.svg"
-                              alt="RapidFix"
-                            />
+                            <Image src="/assets/img/icon/phone-1.svg" width={25} height={25} alt="RapidFix" />
                           </div>
                           <div className="media-body">
                             <h6 className="title text-white">

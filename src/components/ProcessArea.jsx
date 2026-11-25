@@ -1,19 +1,12 @@
+import Image from "next/image";
 
 
 const ProcessArea = () => {
   return (
     <section className="process-area-1 space position-relative">
       <div className="portfolio-shape-img shape-mockup d-lg-block d-none">
-        <img
-          className="about1-shape-img-1 spin"
-          src="/assets/img/normal/about_shape1-2.svg"
-          alt="RapidFix"
-        />
-        <img
-          className="about1-shape-img-2 spin2"
-          src="/assets/img/normal/about_shape1-1.svg"
-          alt="RapidFix"
-        />
+        <Image className="about1-shape-img-1 spin" src="/assets/img/normal/about_shape1-2.svg" width={115} height={119} alt="RapidFix" />
+        <Image className="about1-shape-img-2 spin2" src="/assets/img/normal/about_shape1-1.svg" width={91} height={96} alt="RapidFix" />
       </div>
       <div className="container">
         <div className="row justify-content-center">
@@ -30,7 +23,7 @@ const ProcessArea = () => {
           <div className="col-lg-4 process-card-wrap" data-aos="zoom-in" data-aos-delay="100">
             <div className="process-card">
               <div className="process-card-icon">
-                <img src="/assets/img/icon/process-icon-1-1.svg" alt="RapidFix" />
+                <Image src="/assets/img/icon/process-icon-1-1.svg" width={40} height={40} alt="RapidFix" />
               </div>
               <h4 className="process-card-title">Mobile Car Repair</h4>
               <p className="process-card-text">
@@ -43,7 +36,7 @@ const ProcessArea = () => {
           <div className="col-lg-4 process-card-wrap" data-aos="zoom-in" data-aos-delay="200">
             <div className="process-card process-card-center">
               <div className="process-card-icon">
-                <img src="/assets/img/icon/process-icon-1-2.svg" alt="RapidFix" />
+                <Image src="/assets/img/icon/process-icon-1-2.svg" width={40} height={40} alt="RapidFix" />
               </div>
               <h4 className="process-card-title">Pro Auto Fix</h4>
               <p className="process-card-text">
@@ -56,7 +49,7 @@ const ProcessArea = () => {
           <div className="col-lg-4 process-card-wrap" data-aos="zoom-in" data-aos-delay="300">
             <div className="process-card">
               <div className="process-card-icon">
-                <img src="/assets/img/icon/process-icon-1-3.svg" alt="RapidFix" />
+                <Image src="/assets/img/icon/process-icon-1-3.svg" width={40} height={40} alt="RapidFix" />
               </div>
               <h4 className="process-card-title">Precision Auto Works</h4>
               <p className="process-card-text">

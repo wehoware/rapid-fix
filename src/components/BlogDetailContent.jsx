@@ -276,7 +276,7 @@ const BlogDetailContent = ({ blog }) => {
                         <div className="recent-post" key={post.id}>
                           <div className="media-img">
                             <Link href={`/blog/${post.slug}`}>
-                              <img
+                              <img loading="lazy"
                                 src={post.thumbnail || "/assets/img/blog/blog-1.jpg"}
                                 alt={post.title}
                               />
@@ -308,7 +308,7 @@ const BlogDetailContent = ({ blog }) => {
                       <div className="recent-post" key={svc.id}>
                         <div className="media-img">
                           <Link href={`/services/${svc.slug}`}>
-                            <img
+                            <img loading="lazy"
                               src={svc.thumbnail || "/assets/img/services/service-1.jpg"}
                               alt={svc.title}
                             />

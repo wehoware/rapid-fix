@@ -1,7 +1,8 @@
 "use client"
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, FreeMode, Thumbs, EffectFade } from "swiper";
+import { Navigation, FreeMode, Thumbs, EffectFade } from "swiper/modules";
+import Image from "next/image";
 const Testimonials = () => {
   return (
     <div
@@ -11,7 +12,7 @@ const Testimonials = () => {
         <div className="row">
           <div className="col-lg-6 d-flex align-items-center justify-content-center" data-aos="fade-right" data-aos-duration="900">
             <div className="testimonial-thumb1 text-center">
-              <img src="/assets/img/about/about-17.jpg" alt="RapidFix" style={{ maxWidth: "100%", margin: "0 auto" }} />
+              <Image src="/assets/img/about/about-17.jpg" width={564} height={358} alt="RapidFix" style={{ maxWidth: "100%", margin: "0 auto" }} />
             </div>
           </div>
           <div className="col-lg-6" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
@@ -55,7 +56,7 @@ const Testimonials = () => {
                               <span className="testi-profile-desig">Customer</span>
                             </div>
                             <div className="quote-icon">
-                              <img src="/assets/img/icon/quote1-1.svg" alt="RapidFix" />
+                              <Image src="/assets/img/icon/quote1-1.svg" width={60} height={44} alt="RapidFix" />
                             </div>
                           </div>
                           <p className="testi-card_text">
@@ -78,7 +79,7 @@ const Testimonials = () => {
                               <span className="testi-profile-desig">Customer</span>
                             </div>
                             <div className="quote-icon">
-                              <img src="/assets/img/icon/quote1-1.svg" alt="RapidFix" />
+                              <Image src="/assets/img/icon/quote1-1.svg" width={60} height={44} alt="RapidFix" />
                             </div>
                           </div>
                           <p className="testi-card_text">
@@ -101,7 +102,7 @@ const Testimonials = () => {
                               <span className="testi-profile-desig">Customer</span>
                             </div>
                             <div className="quote-icon">
-                              <img src="/assets/img/icon/quote1-1.svg" alt="RapidFix" />
+                              <Image src="/assets/img/icon/quote1-1.svg" width={60} height={44} alt="RapidFix" />
                             </div>
                           </div>
                           <p className="testi-card_text">

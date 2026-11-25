@@ -4,6 +4,7 @@ import { useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 import { useTransform, motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export function TruckModel({ scrollYProgress }) {
   const gltf = useGLTF("/assets/glb/truck.glb");
@@ -63,11 +64,7 @@ const Truck3D = ({ scrollYProgress, skipModel }) => {
               border: "1px solid rgba(0,0,0,0.1)",
             }}
           >
-            <img
-              src="/assets/img/services/service%202.jpeg"
-              alt="RapidFix Truck Service"
-              style={{ width: "100%", display: "block" }}
-            />
+            <Image src="/assets/img/services/service%202.jpeg" width={1376} height={768} alt="RapidFix Truck Service" style={{ width: "100%", display: "block" }} />
           </div>
         </motion.div>
 

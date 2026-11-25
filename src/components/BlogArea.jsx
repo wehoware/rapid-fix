@@ -62,7 +62,7 @@ const BlogArea = () => {
                   <div>
                     <div className="blog-card style2">
                       <div className="blog-img">
-                        <img
+                        <img loading="lazy"
                           src={blog.thumbnail || "/assets/img/blog/blog-1.jpg"}
                           alt={blog.thumbnail_alt || blog.title}
                         />

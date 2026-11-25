@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 
 const SubscribeTwo = () => {
@@ -12,12 +13,12 @@ const SubscribeTwo = () => {
       >
         <div className="footer-logo" data-aos="fade-down" data-aos-delay="100">
           <Link href="/">
-            <img style={{ width: "200px" }} src="/assets/logo1.png" alt="RapidFix" />
+            <Image style={{ width: "200px" }} src="/assets/logo1.png" width={1429} height={287} alt="RapidFix" />
           </Link>
         </div>
         <div className="call-media-wrap" data-aos="fade-up" data-aos-delay="200">
           <div className="icon">
-            <img src="/assets/img/icon/phone-1.svg" alt="RapidFix" />
+            <Image src="/assets/img/icon/phone-1.svg" width={25} height={25} alt="RapidFix" />
           </div>
           <div className="media-body">
             <h6 className="title text-white">Requesting A Call:</h6>

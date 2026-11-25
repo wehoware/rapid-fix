@@ -9,14 +9,18 @@ import Header from "@/components/Header";
 import Subscribe from "@/components/Subscribe";
 import Preloader from "@/helper/Preloader";
 
-const BlogDetailClient = () => {
+const BlogDetailClient = ({ initialData }) => {
   const params = useParams();
   const slug = params?.slug;
-  const [blog, setBlog] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [blog, setBlog] = useState(initialData || null);
+  const [loading, setLoading] = useState(!initialData);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    if (initialData) {
+      setLoading(false);
+      return;
+    }
     if (!slug) return;
     const fetchBlog = async () => {
       try {
@@ -34,7 +38,7 @@ const BlogDetailClient = () => {
       }
     };
     fetchBlog();
-  }, [slug]);
+  }, [slug, initialData]);
 
   if (loading) {
     return (

@@ -4,10 +4,11 @@ import { SITE_URL } from "@/lib/site";
 import { fetchBlogBySlug } from "@/lib/blogsApi";
 
 export async function generateMetadata({ params }) {
-  const { slug } = params;
+  const { slug } = await params;
   const result = await fetchBlogBySlug(slug);
   const blog = result?.blog || result?.data || result;
-  const canonical = blog?.canonical_url || `${SITE_URL}/blog/${slug}`;
+  // Self-referential canonical on the live URL (same stale-upstream issue).
+  const canonical = `${SITE_URL}/blog/${slug}/`;
 
   const fallbackTitle = slug
     ? slug
@@ -53,7 +54,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function BlogSlugPage({ params }) {
-  const { slug } = params;
+  const { slug } = await params;
   const result = await fetchBlogBySlug(slug);
   const blog = result?.blog || result?.data || result;
 
@@ -67,7 +68,7 @@ export default async function BlogSlugPage({ params }) {
           blog?.faq_schema,
         ]}
       />
-      <BlogDetailClient />
+      <BlogDetailClient initialData={blog} />
     </>
   );
 }

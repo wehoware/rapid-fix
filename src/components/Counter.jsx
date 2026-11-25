@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import CountUp from "react-countup";
+import Image from "next/image";
 
 const Counter = () => {
   const [countersVisible, setCountersVisible] = useState(false);
@@ -35,10 +36,7 @@ const Counter = () => {
                         <p className="counter-card_text">Winning Award</p>
                       </div>
                       <div className="counter-card_icon">
-                        <img
-                          src="assets/img/icon/counter-icon_1-1.svg"
-                          alt="Fixturbo"
-                        />
+                        <Image src="/assets/img/icon/counter-icon_1-1.svg" width={40} height={40} alt="Fixturbo" />
                       </div>
                     </div>
                   </div>
@@ -56,10 +54,7 @@ const Counter = () => {
                         <p className="counter-card_text">Happy Clients</p>
                       </div>
                       <div className="counter-card_icon">
-                        <img
-                          src="assets/img/icon/counter-icon_1-2.svg"
-                          alt="Fixturbo"
-                        />
+                        <Image src="/assets/img/icon/counter-icon_1-2.svg" width={40} height={40} alt="Fixturbo" />
                       </div>
                     </div>
                   </div>
@@ -77,10 +72,7 @@ const Counter = () => {
                         <p className="counter-card_text">Team Members</p>
                       </div>
                       <div className="counter-card_icon">
-                        <img
-                          src="assets/img/icon/counter-icon_1-3.svg"
-                          alt="Fixturbo"
-                        />
+                        <Image src="/assets/img/icon/counter-icon_1-3.svg" width={40} height={40} alt="Fixturbo" />
                       </div>
                     </div>
                   </div>
@@ -98,10 +90,7 @@ const Counter = () => {
                         <p className="counter-card_text">Projects Done</p>
                       </div>
                       <div className="counter-card_icon">
-                        <img
-                          src="assets/img/icon/counter-icon_1-4.svg"
-                          alt="Fixturbo"
-                        />
+                        <Image src="/assets/img/icon/counter-icon_1-4.svg" width={40} height={40} alt="Fixturbo" />
                       </div>
                     </div>
                   </div>
@@ -134,7 +123,7 @@ const Counter = () => {
                 </div>
                 <div className="call-media-wrap">
                   <div className="icon">
-                    <img src="assets/img/icon/phone-1.svg" alt="Fixturbo" />
+                    <Image src="/assets/img/icon/phone-1.svg" width={25} height={25} alt="Fixturbo" />
                   </div>
                   <div className="media-body">
                     <h6 className="title text-white">Requesting A Call:</h6>

@@ -449,7 +449,7 @@ export default function BlogsParallax() {
                       overflow: "hidden",
                     }}
                   >
-                    <img
+                    <img loading="lazy"
                       src={blog.thumbnail}
                       alt={blog.title}
                       className="blogs-parallax-card-img"

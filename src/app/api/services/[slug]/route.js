@@ -7,7 +7,7 @@ const API_CLIENT_ID = process.env.API_CLIENT_ID || 'fce75c6e-733c-4f25-a0dd-bf06
 
 export async function GET(req, { params }) {
   try {
-    const { slug } = params;
+    const { slug } = await params;
     const apiUrl = `${API_BASE_URL}/api/public/services/${encodeURIComponent(slug)}?clientId=${API_CLIENT_ID}`;
 
     const res = await fetch(apiUrl, {

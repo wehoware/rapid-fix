@@ -14,12 +14,12 @@ const stripHtml = (html) => {
   return html.replace(/<[^>]*>?/gm, "");
 };
 
-const ServiceDetailClient = () => {
+const ServiceDetailClient = ({ initialData }) => {
   const params = useParams();
   const slug = params?.slug;
   const { services } = useServices();
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState(initialData || null);
+  const [loading, setLoading] = useState(!initialData);
   const [error, setError] = useState(null);
   const mainRef = useRef(null);
   const needHelpRef = useRef(null);
@@ -90,6 +90,10 @@ const ServiceDetailClient = () => {
   }, [data]);
 
   useEffect(() => {
+    if (initialData) {
+      setLoading(false);
+      return;
+    }
     if (!slug) return;
     const fetchService = async () => {
       try {
@@ -107,7 +111,7 @@ const ServiceDetailClient = () => {
       }
     };
     fetchService();
-  }, [slug]);
+  }, [slug, initialData]);
 
 
   if (loading) {
@@ -314,7 +318,7 @@ const ServiceDetailClient = () => {
                         >
                           {blog.thumbnail && (
                             <div className="related-thumb flex-shrink-0">
-                              <img
+                              <img loading="lazy"
                                 src={blog.thumbnail}
                                 alt={blog.title}
                                 className="rounded-3"

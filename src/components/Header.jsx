@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Header = () => {
   const [active, setActive] = useState(false);
@@ -69,21 +70,21 @@ const Header = () => {
               <div className="col-auto d-lg-none d-block">
                 <div className="header-logo">
                   <Link href="/">
-                    <img src="/assets/logo1.png" alt="RapidFix" width={160} style={{ maxWidth: "100%" }} />
+                    <Image src="/assets/logo1.png" alt="RapidFix" width={160} height={32} style={{ maxWidth: "100%", height: "auto" }} />
                   </Link>
                 </div>
               </div>
               <div className="col-auto d-lg-block d-none header-sticky-none">
                 <div className="header-logo">
                   <Link href="/">
-                    <img src="/assets/logo1.png" alt="RapidFix" width={160} style={{ maxWidth: "100%" }} />
+                    <Image src="/assets/logo1.png" alt="RapidFix" width={160} height={32} style={{ maxWidth: "100%", height: "auto" }} />
                   </Link>
                 </div>
               </div>
               <div className="col-auto header-sticky-logo">
                 <div className="header-logo">
                   <Link href="/">
-                    <img src="/assets/logo1.png" alt="RapidFix" width={160} style={{ maxWidth: "100%" }} />
+                    <Image src="/assets/logo1.png" alt="RapidFix" width={160} height={32} style={{ maxWidth: "100%", height: "auto" }} />
                   </Link>
                 </div>
               </div>
@@ -174,15 +175,13 @@ const Header = () => {
                   >
                     <i className="fas fa-phone-alt me-1" /> Call Now
                   </a>
-                  <a
-                    href="https://app.shopmonkey.cloud/public/quote-request/f3173cde-af0b-453f-93bd-1dbf406b64d0"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href="/request"
                     className="btn text-white btn-quote"
                     style={{ backgroundColor: "var(--theme-color)", border: "none", padding: "8px 16px", borderRadius: "4px" }}
                   >
                     Request a Quote
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -194,7 +193,7 @@ const Header = () => {
           <div className="mobile-menu-area">
             <div className="mobile-logo">
               <Link href="/">
-                <img src="/assets/logo1.png" alt="RapidFix" />
+                <Image src="/assets/logo1.png" width={1429} height={287} alt="RapidFix" />
               </Link>
               <button className="menu-toggle" onClick={mobileMenu}>
                 <i className="fa fa-times" />
@@ -241,15 +240,13 @@ const Header = () => {
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="https://app.shopmonkey.cloud/public/quote-request/f3173cde-af0b-453f-93bd-1dbf406b64d0"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href="/request"
                     className="btn text-white w-100 mt-2 btn-quote"
                     style={{ backgroundColor: "var(--theme-color)", border: "none", padding: "8px 16px", borderRadius: "4px" }}
                   >
                     Request a Quote
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import Marquee from "react-fast-marquee";
+import Image from "next/image";
 const MarqueeComponent = () => {
   return (
     <div className="space bg-smoke" style={{ overflow: "hidden" }}>
@@ -26,37 +27,25 @@ const MarqueeComponent = () => {
             <Marquee>
               <div className="item">
                 <Link href="#">
-                  <img
-                    src="assets/img/icon/marquee-icon-1-1.svg"
-                    alt="RapidFix"
-                  />
+                  <Image src="/assets/img/icon/marquee-icon-1-1.svg" width={65} height={66} alt="RapidFix" />
                   <span>Express Car Fix</span>
                 </Link>
               </div>
               <div className="item">
                 <Link href="#">
-                  <img
-                    src="assets/img/icon/marquee-icon-1-2.svg"
-                    alt="RapidFix"
-                  />
+                  <Image src="/assets/img/icon/marquee-icon-1-2.svg" width={65} height={66} alt="RapidFix" />
                   <span className="text-stroke">Car Care Clinic</span>
                 </Link>
               </div>
               <div className="item">
                 <Link href="#">
-                  <img
-                    src="assets/img/icon/marquee-icon-1-1.svg"
-                    alt="RapidFix"
-                  />
+                  <Image src="/assets/img/icon/marquee-icon-1-1.svg" width={65} height={66} alt="RapidFix" />
                   <span>Express Car Fix</span>
                 </Link>
               </div>
               <div className="item">
                 <Link href="#">
-                  <img
-                    src="assets/img/icon/marquee-icon-1-2.svg"
-                    alt="RapidFix"
-                  />
+                  <Image src="/assets/img/icon/marquee-icon-1-2.svg" width={65} height={66} alt="RapidFix" />
                   <span className="text-stroke">Car Care Clinic</span>
                 </Link>
               </div>

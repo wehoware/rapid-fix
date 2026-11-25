@@ -1,6 +1,7 @@
 "use client";
 import TrackVisibility from "react-on-screen";
 import CountUp from "react-countup";
+import Image from "next/image";
 const About = () => {
   return (
     <div className="space-top">
@@ -9,13 +10,13 @@ const About = () => {
           <div className="col-xxl-7 col-xl-6" data-aos="fade-right" data-aos-duration="900">
             <div className="about-thumb2 mb-40 mb-xl-0">
               <div className="about-img-1">
-                <img src="/assets/img/about/about-15.jpeg" alt="RapidFix" />
+                <Image src="/assets/img/about/about-15.jpeg" width={942} height={630} alt="RapidFix" />
               </div>
               <div className="about-img-2">
-                <img src="/assets/img/about/about-16.jpg" alt="RapidFix" />
+                <Image src="/assets/img/about/about-16.jpg" width={507} height={277} alt="RapidFix" />
               </div>
               <div className="about-counter-wrap jump-reverse">
-                <img src="/assets/img/icon/about_icon2-1.svg" alt="RapidFix" />
+                <Image src="/assets/img/icon/about_icon2-1.svg" width={65} height={39} alt="RapidFix" />
                 <h3 className="about-counter">
                   <TrackVisibility once>
                     {({ isVisible }) =>
@@ -33,10 +34,7 @@ const About = () => {
               <div className="about-year-wrap2 movingX">
                 <div className="about-year-grid-wrap">
                   <div className="icon">
-                    <img
-                      src="/assets/img/icon/about_icon2-2.png"
-                      alt="RapidFix"
-                    />
+                    <Image src="/assets/img/icon/about_icon2-2.png" width={28} height={28} alt="RapidFix" />
                   </div>
                   <h3 className="about-counter">
                     <TrackVisibility once>
@@ -60,11 +58,7 @@ const About = () => {
                 <span className="sub-title" data-aos="fade-up" data-aos-delay="200">Know About Us</span>
                 <h2 className="sec-title" data-aos="fade-up" data-aos-delay="250">
                   More Than Mechanics — Your Trusted Vehicle Partners{" "}
-                  <img
-                    className="title-bg-shape shape-center"
-                    src="/assets/img/bg/title-bg-shape.png"
-                    alt="RapidFix"
-                  />
+                  <Image className="title-bg-shape shape-center" src="/assets/img/bg/title-bg-shape.png" width={485} height={93} alt="RapidFix" />
                 </h2>
                 <p className="sec-text" data-aos="fade-up" data-aos-delay="300">
                   At RapidFix, we're more than just mechanics — we're your
@@ -75,7 +69,7 @@ const About = () => {
               </div>
               <div className="about-feature-wrap style-shadow" data-aos="fade-up" data-aos-delay="350">
                 <div className="icon">
-                  <img src="/assets/img/icon/about_icon2-3.svg" alt="RapidFix" />
+                  <Image src="/assets/img/icon/about_icon2-3.svg" width={65} height={65} alt="RapidFix" />
                 </div>
                 <div className="about-feature-wrap-details">
                   <h5 className="about-feature-title">
@@ -89,7 +83,7 @@ const About = () => {
               </div>
               <div className="about-feature-wrap style-shadow" data-aos="fade-up" data-aos-delay="450">
                 <div className="icon">
-                  <img src="/assets/img/icon/about_icon2-4.svg" alt="RapidFix" />
+                  <Image src="/assets/img/icon/about_icon2-4.svg" width={65} height={65} alt="RapidFix" />
                 </div>
                 <div className="about-feature-wrap-details">
                   <h5 className="about-feature-title">Advanced Diagnostics & Fleet Service</h5>

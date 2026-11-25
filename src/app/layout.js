@@ -6,6 +6,9 @@ import "./font.css";
 import "./globals.scss";
 
 export const metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://www.rapidfixauto.ca"
+  ),
   title: "RapidFix - Car Repair & Auto Services",
   description:
     "RapidFix is your trusted auto repair and maintenance shop in Scarborough and Toronto. We specialize in car repairs, diesel services, routine maintenance, diagnostics, fleet servicing, brake repairs, oil changes, and more. Our certified technicians use advanced diagnostics and quality parts to keep your vehicle safe and reliable.",
@@ -14,9 +17,54 @@ export const metadata = {
     shortcut: "/assets/img/favicons/favicon.png",
     apple: "/assets/img/favicons/favicon.png",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_CA",
+    siteName: "RapidFix Auto",
+    title: "RapidFix - Car Repair & Auto Services",
+    description:
+      "Trusted auto and diesel repair in Scarborough and Toronto. Brakes, diagnostics, fleet maintenance, SSC inspections and more at 112 Sinnott Rd.",
+    url: "/",
+    images: [
+      {
+        url: "/assets/img/contact/contact-1.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "RapidFix Auto - 112 Sinnott Rd, Scarborough",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "RapidFix - Car Repair & Auto Services",
+    description:
+      "Trusted auto and diesel repair in Scarborough and Toronto. Brakes, diagnostics, fleet maintenance, SSC inspections and more.",
+    images: ["/assets/img/contact/contact-1.jpeg"],
+  },
   verification: {
     google: "M49fU-f9Imxle53tdE-EE0NC8MUt5lcVyd-trwzp6fE",
   },
+  other: {
+    "geo.region": "CA-ON",
+    "geo.placename": "Scarborough",
+    "geo.position": "43.7017;-79.2724",
+    ICBM: "43.7017, -79.2724",
+  },
+};
+
+export const viewport = {
+  themeColor: "#E03A3A",
 };
 
 export default function RootLayout({ children }) {
@@ -30,7 +78,7 @@ export default function RootLayout({ children }) {
         />
         <noscript
           dangerouslySetInnerHTML={{
-            __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2064492734143343&ev=PageView&noscript=1" />`,
+            __html: `<img alt="" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2064492734143343&ev=PageView&noscript=1" />`,
           }}
         />
         <Script id="gtm-script" strategy="beforeInteractive">

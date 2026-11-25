@@ -430,7 +430,7 @@ export default function ServicesParallax() {
                   overflow: "hidden",
                 }}
               >
-                <img
+                <img loading="lazy"
                   src={service.image}
                   alt={service.title}
                   className="services-parallax-card-img"
@@ -501,7 +501,7 @@ export default function ServicesParallax() {
                     boxShadow: "0 4px 12px rgba(232,9,46,0.08)",
                   }}
                 >
-                  <img
+                  <img loading="lazy"
                     src={iconList[i % iconList.length]}
                     alt={service.title}
                     style={{

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const CTAArea = () => {
   return (
@@ -32,7 +33,7 @@ const CTAArea = () => {
             </div>
             <div className="col-lg-5">
               <div className="cta2-bg-thumb">
-                <img src="/assets/img/services/service-22.png" alt="RapidFix" />
+                <Image src="/assets/img/services/service-22.png" width={534} height={407} alt="RapidFix" />
               </div>
             </div>
           </div>

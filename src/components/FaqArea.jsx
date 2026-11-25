@@ -1,6 +1,7 @@
 "use client";
 import TrackVisibility from "react-on-screen";
 import CountUp from "react-countup";
+import Image from "next/image";
 const FaqArea = () => {
   return (
     <section className="faq-area-2 space">
@@ -9,10 +10,7 @@ const FaqArea = () => {
           <div className="col-xl-6" data-aos="fade-left" data-aos-duration="900">
             <div className="faq-thumb2 mb-xl-0 mb-50">
               <div className="about-counter-grid jump">
-                <img
-                  src="/assets/img/icon/faq2-counter-icon-1.svg"
-                  alt="RapidFix"
-                />
+                <Image src="/assets/img/icon/faq2-counter-icon-1.svg" width={60} height={60} alt="RapidFix" />
                 <div className="media-right">
                   <h3 className="about-counter">
                     <TrackVisibility once>
@@ -28,7 +26,7 @@ const FaqArea = () => {
                   <h4 className="about-counter-text">Happy customers served</h4>
                 </div>
               </div>
-              <img src="/assets/img/Faq/faq-3.png" alt="RapidFix" />
+              <Image src="/assets/img/Faq/faq-3.png" width={516} height={515} alt="RapidFix" />
             </div>
           </div>
           <div className="col-xl-6" data-aos="fade-right" data-aos-duration="900">
@@ -36,11 +34,7 @@ const FaqArea = () => {
               <span className="sub-title">FREQUENTLY ASKED QUESTIONS</span>
               <h2 className="sec-title">
                 Everything You Need To Know <br /> About Auto Repair{" "}
-                <img
-                  className="title-bg-shape"
-                  src="/assets/img/bg/title-bg-shape.png"
-                  alt="RapidFix"
-                />
+                <Image className="title-bg-shape" src="/assets/img/bg/title-bg-shape.png" width={485} height={93} alt="RapidFix" />
               </h2>
             </div>
             <div className="accordion-area accordion" id="faqAccordion">

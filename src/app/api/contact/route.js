@@ -31,8 +31,49 @@ function shopDateTimeISO(dateStr, timeStr, addMinutes = 0) {
   return `${parts.year}-${parts.month}-${parts.day}T${parts.hour}:${parts.minute}:${parts.second}${torontoOffset(shifted)}`;
 }
 
+// Create a Shopmonkey vehicle linked to the customer record. Accepts the
+// catalog ids from the dropdowns plus free-text fallbacks and an optional
+// Ontario plate.
+async function createShopmonkeyVehicle({ headers, customerId, vehicle }) {
+  const body = {
+    customerId,
+    locationId: SHOPMONKEY_LOCATION_ID,
+    size: vehicle.size || 'LightDuty',
+    ...(vehicle.year ? { year: Number(vehicle.year) } : {}),
+    ...(vehicle.make ? { make: vehicle.make } : {}),
+    ...(vehicle.makeId ? { makeId: Number(vehicle.makeId) } : {}),
+    ...(vehicle.model ? { model: vehicle.model } : {}),
+    ...(vehicle.modelId ? { modelId: Number(vehicle.modelId) } : {}),
+    ...(vehicle.submodel ? { submodel: vehicle.submodel } : {}),
+    ...(vehicle.submodelId ? { submodelId: Number(vehicle.submodelId) } : {}),
+    // Catalog ids/engine info when the vehicle was picked from search results.
+    ...(vehicle.baseId ? { baseId: Number(vehicle.baseId) } : {}),
+    ...(vehicle.vcdbId ? { vcdbId: Number(vehicle.vcdbId) } : {}),
+    ...(vehicle.engine ? { engine: vehicle.engine } : {}),
+    ...(vehicle.engineId ? { engineId: Number(vehicle.engineId) } : {}),
+    ...(vehicle.drivetype ? { drivetype: vehicle.drivetype } : {}),
+    ...(vehicle.drivetypeId ? { drivetypeId: Number(vehicle.drivetypeId) } : {}),
+    ...(vehicle.transmission ? { transmission: vehicle.transmission } : {}),
+    ...(vehicle.transmissionId ? { transmissionId: Number(vehicle.transmissionId) } : {}),
+    ...(vehicle.vin ? { vin: vehicle.vin.toUpperCase() } : {}),
+    ...(vehicle.licensePlate
+      ? { licensePlate: vehicle.licensePlate.trim().toUpperCase(), licensePlateCountry: 'CA', licensePlateState: 'ON' }
+      : {}),
+  };
+  const res = await fetch(`${SHOPMONKEY_API_BASE}/vehicle`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify(body),
+  });
+  const data = await res.json().catch(() => null);
+  if (!res.ok || !data?.data?.id) {
+    throw new Error(`Shopmonkey create vehicle failed (${res.status}): ${JSON.stringify(data).slice(0, 300)}`);
+  }
+  return data.data.id;
+}
+
 // Create a Shopmonkey appointment for the preferred date/time on a customer record.
-async function createShopmonkeyAppointment({ headers, customer, service, date, time, summary }) {
+async function createShopmonkeyAppointment({ headers, customer, service, date, time, summary, vehicleId }) {
   const body = {
     name: service && service !== 'Choose' ? service : 'Website appointment request',
     color: 'blue',
@@ -45,6 +86,7 @@ async function createShopmonkeyAppointment({ headers, customer, service, date, t
     origin: 'AppointmentScheduler',
     sendConfirmation: false,
     sendReminder: false,
+    ...(vehicleId ? { vehicleId } : {}),
   };
   if (time) {
     body.startDate = shopDateTimeISO(date, time);
@@ -70,7 +112,7 @@ async function createShopmonkeyAppointment({ headers, customer, service, date, t
 // Best-effort dedupe + create a lead customer in Shopmonkey.
 // Attribution (gclid/UTMs) is stored on the customer record so the ad click
 // can be tied back to the eventual order/payment inside Shopmonkey.
-async function createShopmonkeyLead({ name, email, phone, service, date, time, message, attribution }) {
+async function createShopmonkeyLead({ name, email, phone, service, date, time, message, attribution, stage, vehicle }) {
   const apiKey = process.env.SHOPMONKEY_API_KEY;
   if (!apiKey) return { skipped: true };
 
@@ -84,14 +126,20 @@ async function createShopmonkeyLead({ name, email, phone, service, date, time, m
   const firstName = firstSpace === -1 ? trimmed : trimmed.slice(0, firstSpace);
   const lastName = firstSpace === -1 ? '(web lead)' : trimmed.slice(firstSpace + 1).trim();
 
+  const vehicleSummary = vehicle && (vehicle.year || vehicle.make || vehicle.model || vehicle.licensePlate)
+    ? `Vehicle: ${[vehicle.year, vehicle.make, vehicle.model, vehicle.submodel].filter(Boolean).join(' ')}${vehicle.licensePlate ? ` | plate ${vehicle.licensePlate.toUpperCase()}` : ''}`
+    : null;
+
   const summary = [
     'Lead: rapidfixauto.ca',
+    stage === 'lead' ? 'Stage: form started (step 1 only — no vehicle/service yet)' : null,
     service && service !== 'Choose' ? `Service: ${service}` : null,
     date ? `Preferred: ${date}${time ? ` ${time}` : ''}` : null,
     attribution?.utm_source ? `Source: ${attribution.utm_source}${attribution.utm_medium ? `/${attribution.utm_medium}` : ''}` : null,
     attribution?.utm_campaign ? `Campaign: ${attribution.utm_campaign}` : null,
     attribution?.gclid ? `Google Ads click (gclid: ${attribution.gclid})` : null,
     attribution?.landingPage ? `Landing page: ${attribution.landingPage}` : null,
+    vehicleSummary,
     message ? `Notes: ${message}` : null,
   ].filter(Boolean).join(' | ');
 
@@ -142,12 +190,24 @@ async function createShopmonkeyLead({ name, email, phone, service, date, time, m
 
   const result = { customerId: customer.id, existing };
 
+  // Attach the vehicle record when the multi-step form collected one.
+  if (vehicle && (vehicle.year || vehicle.make || vehicle.model || vehicle.licensePlate)) {
+    try {
+      result.vehicleId = await createShopmonkeyVehicle({
+        headers, customerId: customer.id, vehicle,
+      });
+    } catch (err) {
+      console.error('Shopmonkey vehicle create failed:', err);
+      result.vehicleError = true;
+    }
+  }
+
   // Book the preferred slot as a Shopmonkey appointment when a date was given.
   // Staff still confirm it manually in Shopmonkey — nothing is auto-confirmed.
   if (date) {
     try {
       result.appointmentId = await createShopmonkeyAppointment({
-        headers, customer, service, date, time, summary,
+        headers, customer, service, date, time, summary, vehicleId: result.vehicleId,
       });
     } catch (err) {
       console.error('Shopmonkey appointment create failed:', err);
@@ -161,11 +221,12 @@ async function createShopmonkeyLead({ name, email, phone, service, date, time, m
 export async function POST(req) {
   try {
     const body = await req.json();
-    const { name, email, phone, service, date, time, message, attribution } = body;
+    const { name, email, phone, service, date, time, message, attribution, stage, vehicle } = body;
+    const isPartialLead = stage === 'lead';
 
-    if (!name || !email || !message) {
+    if (!name || !email) {
       return NextResponse.json(
-        { success: false, message: 'Name, email, and message are required.' },
+        { success: false, message: 'Name and email are required.' },
         { status: 400 }
       );
     }
@@ -193,6 +254,13 @@ export async function POST(req) {
           }
     );
 
+    const vehicleDesc = vehicle && (vehicle.year || vehicle.make || vehicle.model)
+      ? [vehicle.year, vehicle.make, vehicle.model, vehicle.submodel].filter(Boolean).join(' ')
+      : '';
+    const vehicleInfo = [];
+    if (vehicleDesc) vehicleInfo.push(`Vehicle: ${vehicleDesc}`);
+    if (vehicle?.licensePlate) vehicleInfo.push(`License plate: ${vehicle.licensePlate.toUpperCase()}`);
+
     const appointmentInfo = [];
     if (phone) appointmentInfo.push(`Phone: ${phone}`);
     if (service && service !== 'Choose') appointmentInfo.push(`Service: ${service}`);
@@ -210,28 +278,29 @@ export async function POST(req) {
       from: process.env.EMAIL_FROM || `"RapidFix Website" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_TO || process.env.EMAIL_USER,
       replyTo: email,
-      subject: `New Contact from ${name}`,
+      subject: isPartialLead ? `New Website Lead (form started) — ${name}` : `New Contact from ${name}`,
       text: [
+        isPartialLead ? 'Form stage: STARTED (visitor completed step 1 only)' : 'Form stage: COMPLETED',
         `Name: ${name}`,
         `Email: ${email}`,
         ...appointmentInfo,
+        ...vehicleInfo,
         ...(attributionLines.length ? ['', '--- Ad Attribution ---', ...attributionLines] : []),
-        '',
-        `Message:`,
-        message,
+        ...(message ? ['', 'Message:', message] : []),
       ].join('\n'),
       html: `
-        <h2>New Contact Form Submission</h2>
+        <h2>${isPartialLead ? 'New Lead — Quote Form Started' : 'New Contact Form Submission'}</h2>
+        ${isPartialLead ? '<p><em>Visitor completed step 1 only — follow up to help them finish the request.</em></p>' : ''}
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ''}
         ${service && service !== 'Choose' ? `<p><strong>Service:</strong> ${service}</p>` : ''}
+        ${vehicleDesc ? `<p><strong>Vehicle:</strong> ${vehicleDesc}</p>` : ''}
+        ${vehicle?.licensePlate ? `<p><strong>License Plate:</strong> ${vehicle.licensePlate.toUpperCase()}</p>` : ''}
         ${date ? `<p><strong>Preferred Date:</strong> ${date}</p>` : ''}
         ${time ? `<p><strong>Preferred Time:</strong> ${time}</p>` : ''}
         ${attributionLines.length ? `<hr/><p><strong>Ad Attribution:</strong><br/>${attributionLines.join('<br/>')}</p>` : ''}
-        <hr/>
-        <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, '<br/>')}</p>
+        ${message ? `<hr/><p><strong>Message:</strong></p><p>${message.replace(/\n/g, '<br/>')}</p>` : ''}
       `,
     };
 
@@ -239,7 +308,7 @@ export async function POST(req) {
     // Email is the source of truth; Shopmonkey failure never blocks the lead.
     const [emailResult, shopmonkeyResult] = await Promise.allSettled([
       transporter.sendMail(mailOptions),
-      createShopmonkeyLead({ name, email, phone, service, date, time, message, attribution }),
+      createShopmonkeyLead({ name, email, phone, service, date, time, message, attribution, stage, vehicle }),
     ]);
 
     if (emailResult.status === 'rejected') {

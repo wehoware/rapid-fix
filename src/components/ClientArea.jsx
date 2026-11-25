@@ -1,10 +1,11 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, FreeMode, Thumbs, EffectFade } from "swiper";
+import { Navigation, FreeMode, Thumbs, EffectFade } from "swiper/modules";
 import Link from "next/link";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Image from "next/image";
 const ClientArea = () => {
   return (
     <div
@@ -46,7 +47,7 @@ const ClientArea = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="/assets/img/services/service-11.png" alt="RapidFix" />
+                      <Image src="/assets/img/services/service-11.png" width={100} height={100} alt="RapidFix" />
                     </Link>
                   </div>
                 </div>
@@ -55,7 +56,7 @@ const ClientArea = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="/assets/img/services/service-12.png" alt="RapidFix" />
+                      <Image src="/assets/img/services/service-12.png" width={172} height={100} alt="RapidFix" />
                     </Link>
                   </div>
                 </div>
@@ -64,7 +65,7 @@ const ClientArea = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="/assets/img/services/service-13.png" alt="RapidFix" />
+                      <Image src="/assets/img/services/service-13.png" width={98} height={100} alt="RapidFix" />
                     </Link>
                   </div>
                 </div>
@@ -73,7 +74,7 @@ const ClientArea = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="/assets/img/services/service-14.png" alt="RapidFix" />
+                      <Image src="/assets/img/services/service-14.png" width={98} height={90} alt="RapidFix" />
                     </Link>
                   </div>
                 </div>
@@ -82,7 +83,7 @@ const ClientArea = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="/assets/img/services/service-15.png" alt="RapidFix" />
+                      <Image src="/assets/img/services/service-15.png" width={106} height={100} alt="RapidFix" />
                     </Link>
                   </div>
                 </div>
@@ -91,7 +92,7 @@ const ClientArea = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="/assets/img/services/service-11.png" alt="RapidFix" />
+                      <Image src="/assets/img/services/service-11.png" width={100} height={100} alt="RapidFix" />
                     </Link>
                   </div>
                 </div>
@@ -100,7 +101,7 @@ const ClientArea = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="/assets/img/services/service-12.png" alt="RapidFix" />
+                      <Image src="/assets/img/services/service-12.png" width={172} height={100} alt="RapidFix" />
                     </Link>
                   </div>
                 </div>
@@ -110,7 +111,7 @@ const ClientArea = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="/assets/img/services/service-13.png" alt="RapidFix" />
+                      <Image src="/assets/img/services/service-13.png" width={98} height={100} alt="RapidFix" />
                     </Link>
                   </div>
                 </div>
@@ -119,7 +120,7 @@ const ClientArea = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="/assets/img/services/service-14.png" alt="RapidFix" />
+                      <Image src="/assets/img/services/service-14.png" width={98} height={90} alt="RapidFix" />
                     </Link>
                   </div>
                 </div>
@@ -128,7 +129,7 @@ const ClientArea = () => {
                 <div>
                   <div className="client-logo">
                     <Link href="/">
-                      <img src="/assets/img/services/service-15.png" alt="RapidFix" />
+                      <Image src="/assets/img/services/service-15.png" width={106} height={100} alt="RapidFix" />
                     </Link>
                   </div>
                 </div>
@@ -150,7 +151,7 @@ const ClientArea = () => {
                   <h2 className="sec-title text-white">WHAT OUR CLIENT SAYS</h2>
                 </div>
                 <div className="quote-icon">
-                  <img src="/assets/img/icon/quote2-1.svg" alt="RapidFix" />
+                  <Image src="/assets/img/icon/quote2-1.svg" width={301} height={216} alt="RapidFix" />
                 </div>
                 <div className="row global-carousel testi-slider-2">
                   <Swiper
@@ -190,11 +191,7 @@ const ClientArea = () => {
                           <div className="testi-card_content">
                             <div className="testi-card-profile">
                               <div className="testi-profile_thumb">
-                                <img
-                                  src="/assets/img/services/service-19.jpg"
-                                  alt="RapidFix"
-                                  style={{ width: "80px", height: "80px", objectFit: "cover", borderRadius: "50%" }}
-                                />
+                                <Image src="/assets/img/services/service-19.jpg" width={400} height={400} alt="RapidFix" style={{ width: "80px", height: "80px", objectFit: "cover", borderRadius: "50%" }} />
                               </div>
                               <div className="testi-card-profile-details">
                                 <h4 className="testi-profile-title">
@@ -225,11 +222,7 @@ const ClientArea = () => {
                           <div className="testi-card_content">
                             <div className="testi-card-profile">
                               <div className="testi-profile_thumb">
-                                <img
-                                  src="/assets/img/services/service-20.jpg"
-                                  alt="RapidFix"
-                                  style={{ width: "80px", height: "80px", objectFit: "cover", borderRadius: "50%" }}
-                                />
+                                <Image src="/assets/img/services/service-20.jpg" width={600} height={600} alt="RapidFix" style={{ width: "80px", height: "80px", objectFit: "cover", borderRadius: "50%" }} />
                               </div>
                               <div className="testi-card-profile-details">
                                 <h4 className="testi-profile-title">
@@ -260,11 +253,7 @@ const ClientArea = () => {
                           <div className="testi-card_content">
                             <div className="testi-card-profile">
                               <div className="testi-profile_thumb">
-                                <img
-                                  src="/assets/img/services/service-21.jpg"
-                                  alt="RapidFix"
-                                  style={{ width: "80px", height: "80px", objectFit: "cover", borderRadius: "50%" }}
-                                />
+                                <Image src="/assets/img/services/service-21.jpg" width={600} height={600} alt="RapidFix" style={{ width: "80px", height: "80px", objectFit: "cover", borderRadius: "50%" }} />
                               </div>
                               <div className="testi-card-profile-details">
                                 <h4 className="testi-profile-title">
@@ -304,7 +293,7 @@ const ClientArea = () => {
           </div>
         </div>
         <div className="testimonial-thumb-2">
-          <img style={{borderRadius: "0px 10px 10px 0px"}} src="/assets/img/services/service-17.jpeg" alt="RapidFix" />
+          <Image style={{borderRadius: "0px 10px 10px 0px"}} src="/assets/img/services/service-17.jpeg" width={896} height={1200} alt="RapidFix" />
         </div>
       </div>
     </div>

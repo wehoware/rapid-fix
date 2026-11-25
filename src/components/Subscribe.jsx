@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const Subscribe = () => {
   return (
@@ -6,11 +7,7 @@ const Subscribe = () => {
       <div className="footer-top-3" data-aos="zoom-in" data-aos-duration="800">
         <div className="footer-logo" data-aos="fade-down" data-aos-delay="100">
           <Link href="/">
-            <img
-              style={{ width: "170px"}}
-              src="/assets/logo1.png"
-              alt="RapidFix"
-            />
+            <Image style={{ width: "170px"}} src="/assets/logo1.png" width={1429} height={287} alt="RapidFix" />
           </Link>
         </div>
         <h3 className="footer-top-title text-white" data-aos="fade-up" data-aos-delay="150">

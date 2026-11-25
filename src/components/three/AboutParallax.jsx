@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CountUp from "react-countup";
+import Image from "next/image";
 
 const counters = [
   { end: 5, suffix: "k+", label: "Trusted Customers", icon: "fa-users" },
@@ -472,11 +473,7 @@ export default function AboutParallax() {
             zIndex: 2,
           }}
         >
-          <img
-            src="/assets/img/about/Mechanics_with_customer_shoulder_202605122259.jpeg"
-            alt="RapidFix mechanic"
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-          />
+          <Image src="/assets/img/about/Mechanics_with_customer_shoulder_202605122259.jpeg" width={1376} height={768} alt="RapidFix mechanic" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         </div>
         </div>
         <div>
