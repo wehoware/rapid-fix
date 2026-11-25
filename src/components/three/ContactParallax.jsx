@@ -16,14 +16,14 @@ const contactMethods = [
   {
     icon: "fa-phone-alt",
     label: "Call Us",
-    value: "(555) 123-4567",
-    href: "tel:+15551234567",
+    value: "(437) 836-4848",
+    href: "tel:+14378364848",
   },
   {
     icon: "fa-envelope",
     label: "Email Us",
-    value: "support@rapidfix.com",
-    href: "mailto:support@rapidfix.com",
+    value: "info@rapidfixauto.ca",
+    href: "mailto:info@rapidfixauto.ca",
   },
   {
     icon: "fa-clock",

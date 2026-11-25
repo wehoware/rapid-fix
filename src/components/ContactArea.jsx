@@ -155,7 +155,7 @@ const ContactArea = () => {
                 </div>
                 <h6 className="contact-info_title">Phone Number</h6>
                 <p className="contact-info_text">
-                  <a href="tel:4378364848">(437) 836-4848</a>
+                  <a href="tel:+14378364848">(437) 836-4848</a>
                 </p>
               </div>
             </div>
@@ -176,7 +176,7 @@ const ContactArea = () => {
                 </div>
                 <h6 className="contact-info_title">E-mail</h6>
                 <p className="contact-info_text">
-                  <a href="mailto:Info@rapidfixauto.ca">Info@rapidfixauto.ca</a>
+                  <a href="mailto:info@rapidfixauto.ca">info@rapidfixauto.ca</a>
                 </p>
               </div>
             </div>
@@ -335,7 +335,7 @@ const ContactArea = () => {
                   </div>
                   <div className="form-btn col-12 d-flex gap-2 flex-wrap">
                     <a
-                      href="tel:4378364848"
+                      href="tel:+14378364848"
                       className="btn-call-now"
                       style={{
                         backgroundColor: "#E03A3A",

@@ -159,7 +159,7 @@ const Footer3D = () => {
                   Phone
                 </div>
                 <Link
-                  href="tel:4378364848"
+                  href="tel:+14378364848"
                   style={{ fontSize: "14px", color: "rgba(0,0,0,0.75)", textDecoration: "none" }}
                 >
                   (437) 836-4848

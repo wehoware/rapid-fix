@@ -121,7 +121,7 @@ const Header = () => {
                 </nav>
                 <div className="navbar-right d-inline-flex d-lg-none">
                   <a
-                    href="tel:4378364848"
+                    href="tel:+14378364848"
                     className="call-btn-mobile"
                     aria-label="Call RapidFix"
                   >
@@ -163,13 +163,13 @@ const Header = () => {
                       </svg>
                     </div>
                     <div className="navbar-right-desc-details">
-                      <a className="link" href="tel:4378364848">
+                      <a className="link" href="tel:+14378364848">
                         (437) 836-4848
                       </a>
                     </div>
                   </div>
                   <a
-                    href="tel:4378364848"
+                    href="tel:+14378364848"
                     className="btn text-white btn-call-now"
                     style={{ backgroundColor: "#E03A3A", border: "none", padding: "8px 16px", borderRadius: "4px" }}
                   >
@@ -232,7 +232,7 @@ const Header = () => {
                 </li>
                 <li>
                   <a
-                    href="tel:4378364848"
+                    href="tel:+14378364848"
                     className="btn text-white w-100 mt-2 btn-call-now"
                     style={{ backgroundColor: "#E03A3A", border: "none", padding: "8px 16px", borderRadius: "4px" }}
                   >

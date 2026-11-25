@@ -300,7 +300,7 @@ const Hero3D = ({ scrollYProgress, skipModel }) => {
                 Call us now:
               </div>
               <a
-                href="tel:4378364848"
+                href="tel:+14378364848"
                 style={{
                   fontFamily: '"Playfair Display", serif',
                   fontSize: "18px",

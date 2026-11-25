@@ -91,7 +91,7 @@ const HeroThree = () => {
                               Call us now:
                             </h6>
                             <h4 className="link">
-                              <a className="text-white" href="tel:4378364848">
+                              <a className="text-white" href="tel:+14378364848">
                                 (437) 836-4848
                               </a>
                             </h4>
@@ -177,7 +177,7 @@ const HeroThree = () => {
                               Call us now:
                             </h6>
                             <h4 className="link">
-                              <a className="text-white" href="tel:4378364848">
+                              <a className="text-white" href="tel:+14378364848">
                                 (437) 836-4848
                               </a>
                             </h4>

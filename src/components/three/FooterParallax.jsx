@@ -135,7 +135,7 @@ export default function FooterParallax() {
           {/* Mobile CTA buttons */}
           <div className="footer-mobile-cta" style={{ display: "none" }}>
             <a
-              href="tel:+15551234567"
+              href="tel:+14378364848"
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -258,8 +258,8 @@ export default function FooterParallax() {
       >
         {[
           { icon: "fa-map-marker-alt", text: "123 Auto Repair Blvd, Springfield, ST 12345" },
-          { icon: "fa-phone-alt", text: "(555) 123-4567" },
-          { icon: "fa-envelope", text: "support@rapidfix.com" },
+          { icon: "fa-phone-alt", text: "(437) 836-4848" },
+          { icon: "fa-envelope", text: "info@rapidfixauto.ca" },
           { icon: "fa-clock", text: "Mon - Sat: 8:00 AM - 6:00 PM" },
         ].map((item, i) => (
           <div

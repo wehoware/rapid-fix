@@ -205,10 +205,10 @@ const page = () => {
                   </p>
                   <p className={styles.contactText}>
                     Email:{" "}
-                    <a href="mailto:info@rapidfix.ca">info@rapidfix.ca</a>
+                    <a href="mailto:info@rapidfixauto.ca">info@rapidfixauto.ca</a>
                   </p>
                   <p className={styles.contactText}>
-                    Phone: <a href="tel:4378364848">(437) 836-4848</a>
+                    Phone: <a href="tel:+14378364848">(437) 836-4848</a>
                   </p>
                   <p className={styles.contactText}>
                     Address: 112 Sinnott Rd, Scarborough, ON M1L 4S6

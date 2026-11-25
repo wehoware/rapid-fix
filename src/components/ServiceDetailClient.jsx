@@ -367,11 +367,11 @@ const ServiceDetailClient = ({ initialData }) => {
                   <div className="contact-info mb-20">
                     <div className="d-flex align-items-center gap-2 mb-10">
                       <i className="fas fa-phone text-theme" />
-                      <Link href="tel:4378364848" className="text-decoration-none fw-semibold need-help-link">(437) 836-4848</Link>
+                      <Link href="tel:+14378364848" className="text-decoration-none fw-semibold need-help-link">(437) 836-4848</Link>
                     </div>
                     <div className="d-flex align-items-center gap-2 mb-10">
                       <i className="fas fa-envelope text-theme" />
-                      <Link href="mailto:support@rapidfix.com" className="text-decoration-none fw-semibold need-help-link">support@rapidfix.com</Link>
+                      <Link href="mailto:info@rapidfixauto.ca" className="text-decoration-none fw-semibold need-help-link">info@rapidfixauto.ca</Link>
                     </div>
                     <div className="d-flex align-items-start gap-2">
                       <i className="fas fa-clock text-theme mt-1" />

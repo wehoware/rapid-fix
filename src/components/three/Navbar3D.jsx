@@ -69,7 +69,7 @@ export default function Navbar3D() {
           </div>
 
           <div className={styles.cta}>
-            <a href="tel:4378364848" className={styles.phoneLink}>
+            <a href="tel:+14378364848" className={styles.phoneLink}>
               <span className={styles.phoneIcon}>
                 <i className="fas fa-phone" />
               </span>
@@ -77,7 +77,7 @@ export default function Navbar3D() {
             </a>
 
             <a
-              href="tel:4378364848"
+              href="tel:+14378364848"
               className={styles.callBtn}
             >
               <i className="fas fa-phone" /> Call Now
@@ -116,7 +116,7 @@ export default function Navbar3D() {
               </Link>
             ))}
             <a
-              href="tel:4378364848"
+              href="tel:+14378364848"
               className={styles.mobileCallBtn}
             >
               <i className="fas fa-phone" /> Call Now

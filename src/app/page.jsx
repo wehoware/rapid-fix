@@ -41,7 +41,7 @@ const localBusinessSchema = {
   name: "RapidFix Auto",
   url: SITE_URL,
   telephone: "+1-437-836-4848",
-  email: "Info@rapidfixauto.ca",
+  email: "info@rapidfixauto.ca",
   address: {
     "@type": "PostalAddress",
     streetAddress: "112 Sinnott Rd",

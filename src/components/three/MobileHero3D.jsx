@@ -278,7 +278,7 @@ export default function MobileHero3D() {
           </Link>
 
           <a
-            href="tel:4378364848"
+            href="tel:+14378364848"
             style={{
               display: "inline-flex",
               alignItems: "center",

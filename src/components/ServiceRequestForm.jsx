@@ -309,7 +309,7 @@ const ServiceRequestForm = () => {
           Thanks {formData.name.split(" ")[0]}, we&apos;ve got your details and will confirm shortly.
         </p>
         <p className="text-muted">
-          Need it sooner? Call us at <a href="tel:4378364848">(437) 836-4848</a>.
+          Need it sooner? Call us at <a href="tel:+14378364848">(437) 836-4848</a>.
         </p>
       </div>
     );
@@ -788,7 +788,7 @@ const ServiceRequestForm = () => {
                 </>
               )}
             </button>
-            <a href="tel:4378364848" className="ms-auto text-decoration-none">
+            <a href="tel:+14378364848" className="ms-auto text-decoration-none">
               <i className="fas fa-phone-alt me-1" /> (437) 836-4848
             </a>
           </div>
