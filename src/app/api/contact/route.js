@@ -112,6 +112,26 @@ async function createShopmonkeyAppointment({ headers, customer, service, date, t
 // Best-effort dedupe + create a lead customer in Shopmonkey.
 // Attribution (gclid/UTMs) is stored on the customer record so the ad click
 // can be tied back to the eventual order/payment inside Shopmonkey.
+async function createShopmonkeyOrder({ headers, customerId, vehicleId, service, summary }) {
+  const res = await fetch(`${SHOPMONKEY_API_BASE}/order`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify({
+      customerId,
+      ...(vehicleId ? { vehicleId } : {}),
+      name: service && service !== 'Choose' ? `${service} — Website Request` : 'Website Service Request',
+      complaint: summary,
+      locationId: SHOPMONKEY_LOCATION_ID,
+      attributionSource: 'Website',
+    }),
+  });
+  const data = await res.json();
+  if (!res.ok || !data?.data?.id) {
+    throw new Error(`Shopmonkey order create failed (${res.status}): ${JSON.stringify(data).slice(0, 300)}`);
+  }
+  return data.data.id;
+}
+
 async function createShopmonkeyLead({ name, email, phone, service, date, time, message, attribution, stage, vehicle }) {
   const apiKey = process.env.SHOPMONKEY_API_KEY;
   if (!apiKey) return { skipped: true };
@@ -212,6 +232,23 @@ async function createShopmonkeyLead({ name, email, phone, service, date, time, m
     } catch (err) {
       console.error('Shopmonkey appointment create failed:', err);
       result.appointmentError = true;
+    }
+  }
+
+  // Complete submissions also open a workflow order so they show in the
+  // Estimation column — partial step-1 leads stay as customer records only.
+  if (stage !== 'lead') {
+    try {
+      result.orderId = await createShopmonkeyOrder({
+        headers,
+        customerId: customer.id,
+        vehicleId: result.vehicleId,
+        service,
+        summary,
+      });
+    } catch (err) {
+      console.error('Shopmonkey order create failed:', err);
+      result.orderError = true;
     }
   }
 
