@@ -28,7 +28,7 @@ const contactMethods = [
   {
     icon: "fa-clock",
     label: "Working Hours",
-    value: "Mon - Sat: 8:00 AM - 6:00 PM",
+    value: "Mon - Fri: 8:00 AM - 6:00 PM",
     href: null,
   },
 ];

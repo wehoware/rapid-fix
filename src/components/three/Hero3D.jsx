@@ -63,7 +63,7 @@ const Hero3D = ({ scrollYProgress, skipModel }) => {
   const stats = [
     { icon: "fas fa-wrench", value: "8+", label: "Certified Technicians" },
     { icon: "fas fa-truck", value: "2k+", label: "Fleet Serviced" },
-    { icon: "fas fa-clock", value: "24/7", label: "Emergency Support" },
+    { icon: "fas fa-clock", value: "Mon–Fri", label: "8:00 AM – 6:00 PM" },
   ];
 
   return (

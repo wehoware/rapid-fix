@@ -375,7 +375,7 @@ const ServiceDetailClient = ({ initialData }) => {
                     </div>
                     <div className="d-flex align-items-start gap-2">
                       <i className="fas fa-clock text-theme mt-1" />
-                      <span className="text-dark small fw-semibold">Mon - Sat: 8:00 AM - 6:00 PM</span>
+                      <span className="text-dark small fw-semibold">Mon - Fri: 8:00 AM - 6:00 PM</span>
                     </div>
                   </div>
                   <Link href="/contact" className="btn style2 w-100">

@@ -260,7 +260,7 @@ export default function FooterParallax() {
           { icon: "fa-map-marker-alt", text: "123 Auto Repair Blvd, Springfield, ST 12345" },
           { icon: "fa-phone-alt", text: "(437) 836-4848" },
           { icon: "fa-envelope", text: "info@rapidfixauto.ca" },
-          { icon: "fa-clock", text: "Mon - Sat: 8:00 AM - 6:00 PM" },
+          { icon: "fa-clock", text: "Mon - Fri: 8:00 AM - 6:00 PM" },
         ].map((item, i) => (
           <div
             key={i}

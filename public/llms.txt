@@ -28,6 +28,7 @@ RapidFix Auto is a full-service auto repair shop serving Scarborough and the Gre
 - Phone: +1-437-836-4848
 - Email: Info@rapidfixauto.ca
 - Address: 112 Sinnott Rd, Scarborough, ON M1L 4S6, Canada
+- Hours: Monday to Friday, 8:00 AM - 6:00 PM
 - Geo: 43.7017, -79.2724
 - Website: https://www.rapidfixauto.ca
 

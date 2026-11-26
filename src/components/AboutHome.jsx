@@ -33,7 +33,7 @@ const About = () => {
 
   const services = [
     ["Brake Repair & Service", "Engine Diagnostics", "Diesel Engine Repair", "Fleet Maintenance"],
-    ["Safety Inspections (SSC)", "Oil Change Service", "Transmission Service", "24/7 Emergency Service"],
+    ["Safety Inspections (SSC)", "Oil Change Service", "Transmission Service", "Mon–Fri: 8:00 AM – 6:00 PM"],
   ];
 
   return (
